@@ -64,13 +64,15 @@ def executa_processo(a_disponivel, corrente, requisito):
     while "ok" in corrente:  # Remove o processo que executou com sucesso.
         corrente.remove("ok")
         requisito.remove("ok")
-    return a_anterior
+    return a_disponivel
 
 
-def algoritmo_do_banqueiro(a_disponivel, corrente, requisito):
+def algoritmo_do_banqueiro(e, a_disponivel, corrente, requisito):
     a_anterior = []
-    while a_disponivel != a_anterior and len(corrente) != 0:
+    while a_disponivel != a_anterior or len(corrente) != 0:
         a_anterior = executa_processo(a_disponivel, corrente, requisito)
+        printa_tudo(e, a_disponivel, corrente, requisito)
+        input("\nEnter para continuar...")
     if len(corrente) == 0:
         return True
     elif a_disponivel == a_anterior:

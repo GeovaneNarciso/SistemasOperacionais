@@ -15,7 +15,7 @@ def main():
     print("\nPovoar a matriz de requisições:")         # Preenche matriz de requisições
     preenche_matriz(matriz_r, vetor_a, False)          #
     printa_tudo(vetor_e, vetor_a, matriz_c, matriz_r)  # Exibe informações
-    if algoritmo_do_banqueiro(vetor_a, matriz_c, matriz_r):  # ALGORITMO DO BANQUEIRO
+    if algoritmo_do_banqueiro(vetor_e, vetor_a, matriz_c, matriz_r):  # ALGORITMO DO BANQUEIRO
         print(C["CYAN"] + "Não existe deadlock." + C["RES"])
     else:
         print(C["RED"] + "Existe deadlock." + C["RES"])

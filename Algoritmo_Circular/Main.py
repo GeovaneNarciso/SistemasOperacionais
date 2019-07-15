@@ -57,7 +57,7 @@ def algoritmo_circular(fila, quantum, ttc, tempo):
                 cont_quantum += 1
                 if executa_termino(fila, processos, ttc_ativo):
                     if ttc > 0:
-                        if len(fila) > 1:
+                        if len(fila) >= 1:
                             ttc_ativo = True
                             cont_ttc = 0
                     if len(fila) > 0:
